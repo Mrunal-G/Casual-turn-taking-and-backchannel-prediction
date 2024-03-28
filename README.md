@@ -16,6 +16,10 @@ of silence based on a predefined threshold.
 ## Dataset
 - https://catalog.ldc.upenn.edu/LDC97S62  (Switch dataset: release 2)
 
+- Hugggingface dataset: https://huggingface.co/datasets/swda?row=3
+- Tensorflow: Dataset: https://www.tensorflow.org/datasets/community_catalog/huggingface/swda
+  
+
 
 ## Evaluation Metrics
 1. AUC - Area Under Curve
