@@ -28,6 +28,8 @@ The Switchboard dataset is conisdered a Dialog Audio Dataset. The speech data is
 
 More on tags: https://web.stanford.edu/~jurafsky/ws97/manual.august1.html
 
+- https://convokit.cornell.edu/documentation/switchboard.html#dataset-details
+
  <!-- Tensorflow: Dataset: https://www.tensorflow.org/datasets/community_catalog/huggingface/swda --> 
 
   ===
