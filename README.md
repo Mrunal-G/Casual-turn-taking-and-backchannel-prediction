@@ -6,4 +6,6 @@
 
 
 casual turn-taking and backchannel prediction
+
+- The system should be able to take turns naturally and with minimal latency in a dialogue.
    
