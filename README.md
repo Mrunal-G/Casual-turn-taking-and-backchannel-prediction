@@ -16,10 +16,18 @@ of silence based on a predefined threshold.
 -   Turn-taking benefits remarkably from the fusion, but benefits minimally from the instruction-tuning, while Backchannel shows the opposite trend. (Backchanneling benefits from instruction-tuning and minimally from fusion)
 
 ## Datasets
-- https://catalog.ldc.upenn.edu/LDC97S62  (Switch dataset: release 2)
+ <!-- https://catalog.ldc.upenn.edu/LDC97S62 -->
+ (Switch dataset: release 2)
 
 - Hugggingface dataset: https://huggingface.co/datasets/swda?row=3
-- Tensorflow: Dataset: https://www.tensorflow.org/datasets/community_catalog/huggingface/swda
+
+understand the switchboard dataset: 
+`damsl_act_tag`: class label (16, 6) for bh and b which stand for bachchannel examples.
+`act_tag`: (list of str) The Dialog Act Tags (separated by ||| in the file). Check Dialog act annotations for more details.
+
+More on tags: https://web.stanford.edu/~jurafsky/ws97/manual.august1.html
+
+ <!-- Tensorflow: Dataset: https://www.tensorflow.org/datasets/community_catalog/huggingface/swda --> 
 
   ===
 RedPajama
