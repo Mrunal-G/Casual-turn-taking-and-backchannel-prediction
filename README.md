@@ -15,3 +15,10 @@ of silence based on a predefined threshold.
 
 ## Dataset
 - https://catalog.ldc.upenn.edu/LDC97S62  (Switch dataset: release 2)
+
+
+## Evaluation Metrics
+1. AUC - Area Under Curve
+2. Balance Accuracy- bAcc
+3. ROC - An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds. This curve plots two parameters: True Positive Rate. False Positive Rate.
+4. EER - Equal Error Rate
