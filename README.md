@@ -21,7 +21,8 @@ of silence based on a predefined threshold.
 
 - Hugggingface dataset: https://huggingface.co/datasets/swda?row=3
 
-understand the switchboard dataset: 
+**Understand the switchboard dataset**: 
+The Switchboard dataset is conisdered a Dialog Audio Dataset. The speech data is segmented in utterance units, and text trancriptions provided for each utterance.
 `damsl_act_tag`: class label (16, 6) for bh and b which stand for bachchannel examples.
 `act_tag`: (list of str) The Dialog Act Tags (separated by ||| in the file). Check Dialog act annotations for more details.
 
