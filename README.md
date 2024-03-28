@@ -8,5 +8,6 @@
 casual turn-taking and backchannel prediction
 
 - The system should be able to take turns naturally and with minimal latency in a dialogue and
-without the need for push-to-talk or wakewords. 
+without the need for push-to-talk or wakewords or a period
+of silence based on a predefined threshold.
    
