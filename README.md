@@ -22,3 +22,15 @@ of silence based on a predefined threshold.
 2. Balance Accuracy- bAcc
 3. ROC - An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds. This curve plots two parameters: True Positive Rate. False Positive Rate.
 4. EER - Equal Error Rate
+
+# Instruction-tuning 
+
+During training, each sample will be
+augmented three times, with the following respective instructions:
+1) Inst 0: “Identify if the current speaker will continue to speak at
+the end of the sentence.”;
+
+3) Inst 1: “Identify if another speaker will
+backchannel at the end of the sentence.”;
+
+5) Inst 2: “Identify if another speaker will take the turn at the end of the sentence.”
