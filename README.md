@@ -1,5 +1,7 @@
 # Speech_Conversation_fusion_LLM
 
+- Amazon Alex AI research paper: https://www.amazon.science/publications/turn-taking-and-backchannel-prediction-with-acoustic-and-large-language-model-fusion
+
 1. https://arxiv.org/html/2401.14717v1
 2. https://vapi.ai/
 3. https://dashboard.vapi.ai/
@@ -13,11 +15,16 @@ of silence based on a predefined threshold.
 
 -   Turn-taking benefits remarkably from the fusion, but benefits minimally from the instruction-tuning, while Backchannel shows the opposite trend. (Backchanneling benefits from instruction-tuning and minimally from fusion)
 
-## Dataset
+## Datasets
 - https://catalog.ldc.upenn.edu/LDC97S62  (Switch dataset: release 2)
 
 - Hugggingface dataset: https://huggingface.co/datasets/swda?row=3
 - Tensorflow: Dataset: https://www.tensorflow.org/datasets/community_catalog/huggingface/swda
+
+  ===
+RedPajama
+- HuggingFace Dataset: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-V2?row=0
+- 
   
 
 
