@@ -30,9 +30,14 @@ More on tags: https://web.stanford.edu/~jurafsky/ws97/manual.august1.html
  <!-- Tensorflow: Dataset: https://www.tensorflow.org/datasets/community_catalog/huggingface/swda --> 
 
   ===
-RedPajama
+## RedPajama
 - HuggingFace Dataset: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-V2?row=0
-- 
+HuggingFace Redpajama based chat and instruct models (3B & 7B variations):
+- https://huggingface.co/togethercomputer/RedPajama-INCITE-Chat-3B-v1
+- https://huggingface.co/togethercomputer/RedPajama-INCITE-Instruct-3B-v1
+- https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Chat
+- https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Instruct
+  
   
 
 
