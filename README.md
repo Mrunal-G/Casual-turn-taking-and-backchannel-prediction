@@ -26,8 +26,9 @@ The Switchboard dataset is conisdered a Dialog Audio Dataset. The speech data is
 `damsl_act_tag`: class label (16, 6) for bh and b which stand for bachchannel examples.
 `act_tag`: (list of str) The Dialog Act Tags (separated by ||| in the file). Check Dialog act annotations for more details.
 
-More on tags: https://web.stanford.edu/~jurafsky/ws97/manual.august1.html
-
+More on tags: 
+- https://web.stanford.edu/~jurafsky/ws97/manual.august1.html
+- https://compprag.christopherpotts.net/swda.html
 - https://convokit.cornell.edu/documentation/switchboard.html#dataset-details
 
  <!-- Tensorflow: Dataset: https://www.tensorflow.org/datasets/community_catalog/huggingface/swda --> 
