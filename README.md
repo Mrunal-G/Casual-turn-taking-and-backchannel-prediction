@@ -11,6 +11,7 @@ casual turn-taking and backchannel prediction
 without the need for push-to-talk or wakewords or a period
 of silence based on a predefined threshold.
 
+-   Turn-taking benefits remarkably from the fusion, but benefits minimally from the instruction-tuning, while Backchannel shows the opposite trend. (Backchanneling benefits from instruction-tuning and minimally from fusion)
 
 ## Dataset
 - https://catalog.ldc.upenn.edu/LDC97S62  (Switch dataset: release 2)
