@@ -6,7 +6,7 @@ Next I investigate the textual LLM data preprocessing. With textual LLM I have o
 They got better results with redpajama 3B parameter model - it was larger model. So, I can also try the 7B variation of redpajama LLM.
 
 Late fusion = Concatenate embeddings emitted from HuBERT classification and Language model classification and feed into a a single linear
-classification layer with dimension 3 for prediction. 
+classification layer with dimension 3 for prediction.  (need further investigation -  one example https://github.com/cristinalunaj/MMEmotionRecognition)
 
 === 
 the authors mentioned that when looking at each class individually, both
