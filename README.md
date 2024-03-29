@@ -1,4 +1,4 @@
-# Casual turn-taking and backchannel prediction understanding research paper and my plan
+# Casual turn-taking and backchannel prediction: understanding research paper and my plan
 
 
 ## My Plan
