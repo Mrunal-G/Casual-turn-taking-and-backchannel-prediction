@@ -9,7 +9,8 @@ Late fusion = Concatenate embeddings emitted from HuBERT classification and Lang
 classification layer with dimension 3 for prediction.  (need further investigation -  one example https://github.com/cristinalunaj/MMEmotionRecognition)
 
 === 
-the authors mentioned that when looking at each class individually, both
+
+The authors mentioned that when looking at each class individually, both
 “Turn-taking” and “Continuing Speech” classes are predicted better with dialog history information, while the “Backchannel” class sees a
 slight degradation. This could be because backchanneling is largely
 a locally-cued behavior and affected little by long-term context.
