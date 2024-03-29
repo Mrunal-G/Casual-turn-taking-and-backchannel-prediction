@@ -107,6 +107,7 @@ be assigned as 1, otherwise 0.
 - Each classifier is only in charge of one
 corresponding instruction and updates only its parameters, without
 being affected by samples augmented by the other two instructions.
+BCELoss applied to the classifiers
 
 
    ### Instruction-tuning 
