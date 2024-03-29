@@ -53,6 +53,8 @@ swb_punctuations = ["{", "}", "[", "]-", "]", "((", "))", "(", ")"]
 
 ## Data preprocessing:
 
+22nd reference is research paper on `TurnGPT`.
+
 1. Extract dialog sentences from each speaker, while simultaneously normalizing special annotations, including [silence]/[noise] removal,
 partial word completion, and mispronunciation correction, as in [22].
 2. Mark isolated one-word or two-word phrases as backchannel candidates. Backchannels are considered to be the 20 most frequent one
@@ -60,8 +62,16 @@ and two-word phrases, such as “yeah”, “mmhmm” and “oh okay”,
 as summarized in [22].
 3. Combine the two speakers’ dialog sentences in start-time ascending order and break sentences into words,
 for the purpose of word-level labeling in the following steps.
+4. Remove words marked as backchannels and save them in a candidate
+list along with their speaker, start-time and end-time attributes.
+5. Mark all speaker changes as “Turn-taking” at last word spoken by a speaker.
+6. Insert backchannel candidates back into the original
+dialogue according to their start-times and mark the word spoken by
+the other speaker where backchanneling occurs as “Backchannel”.
+If a word is marked by none of these two labels, the default label of
+“Continuing Speech“ is assigned.
 
-22nd reference is research paper on `TurnGPT`.
+
 
 ## Evaluation Metrics
 1. AUC - Area Under Curve
