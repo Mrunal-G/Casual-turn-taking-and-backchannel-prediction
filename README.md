@@ -33,7 +33,7 @@ More on tags:
 
  <!-- Tensorflow: Dataset: https://www.tensorflow.org/datasets/community_catalog/huggingface/swda --> 
 
-[Example of whisper preprocessing switchboard dataset](https://huggingface.co/sanchit-gandhi/whisper-medium-switchboard-5k/blob/main/run_speech_recognition_whisper.py) from huggingface datasets for speech recognition:
+[Example of whisper preprocessing switchboard dataset](https://huggingface.co/sanchit-gandhi/whisper-medium-switchboard-5k/blob/main/run_speech_recognition_whisper.py) for speech recognition:
 
 ```python
 
@@ -44,11 +44,24 @@ swb_punctuations = ["{", "}", "[", "]-", "]", "((", "))", "(", ")"]
 
 ```
 - https://isip.piconepress.com/projects/switchboard/
+
   
 # Tasks described in research paper:
 1. extendingthe turn-taking model to include backchanneling,
 2. use of LLMs with acoustic fusion for these tasks, and
 3. exploration of LLMs for instruction-tuning rather than simple token encoding and prediction
+
+## Data preprocessing:
+
+1. Extract dialog sentences from each speaker, while simultaneously normalizing special annotations, including [silence]/[noise] removal,
+partial word completion, and mispronunciation correction, as in [22].
+2. Mark isolated one-word or two-word phrases as backchannel candidates. Backchannels are considered to be the 20 most frequent one
+and two-word phrases, such as “yeah”, “mmhmm” and “oh okay”,
+as summarized in [22].
+3. Combine the two speakers’ dialog sentences in start-time ascending order and break sentences into words,
+for the purpose of word-level labeling in the following steps.
+
+22nd reference is research paper on `TurnGPT`.
 
 ## Evaluation Metrics
 1. AUC - Area Under Curve
