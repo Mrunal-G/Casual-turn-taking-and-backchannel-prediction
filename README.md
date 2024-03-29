@@ -33,7 +33,16 @@ More on tags:
 
  <!-- Tensorflow: Dataset: https://www.tensorflow.org/datasets/community_catalog/huggingface/swda --> 
 
+[Example of whisper preprocessing switchboard dataset](https://huggingface.co/sanchit-gandhi/whisper-medium-switchboard-5k/blob/main/run_speech_recognition_whisper.py) from huggingface datasets for speech recognition:
 
+```python
+
+swb_disfluencies = ["[noise]", "[laughter]", "[silence]", "[vocalized-noise]", "<a_aside>", "<b_aside>", "<e_aside>",
+                        "[laughter-", "_1", "[laugh]", "[sigh]", "[cough]", "[mn]", "[breath]", "[lipsmack]",
+                        "[sneeze]", "[skip]", "[pause]", "(%hesitation)", "(%HESITATION)"]
+swb_punctuations = ["{", "}", "[", "]-", "]", "((", "))", "(", ")"]
+
+```
   
 # Tasks described in research paper:
 1. extendingthe turn-taking model to include backchanneling,
