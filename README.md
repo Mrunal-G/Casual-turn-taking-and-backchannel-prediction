@@ -82,8 +82,8 @@ HuggingFace Redpajama based chat and instruct models (3B & 7B variations):
 - https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Chat
 - https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Instruct
 
-  Would need to try different models for chat/instruction-tuning may be using trl.
-<!-- https://medium.com/@vi.ai_/fine-tuning-llama-v2-7b-on-google-colab-unleashing-the-full-potential-of-language-modeling-9b9f05c3be35 -->
+<!-- Would need to try different models for chat/instruction-tuning may be using trl.
+ https://medium.com/@vi.ai_/fine-tuning-llama-v2-7b-on-google-colab-unleashing-the-full-potential-of-language-modeling-9b9f05c3be35 -->
   
 # Late Fusion 
 A late fusion mechanism is used where the final embeddings emitted from the AM and LLM are concatenated and fed into a single linear classification layer with dimension 3 for prediction. 
@@ -104,6 +104,13 @@ and downstream task training.
 for the downstream task and frozen**
 Meaning in opt1 hubert is not finetuned. In opt2, hubert is fine-tuned for classification. I am going to start with option 2 here. Standlone finetuning would most probably give better results than just loading pretrained model.  
 
+# Multi-task instruction fine-tuning
+Rather than setting up a three-way classification, each class is handled as a
+separate binary classification task. This will later allows us to evaluate performance as three separate detection tasks.
+
+1. task 1: Continuing Speech (0)  --> encoded as (100)
+2. task 2: Backchannel (1)        --> encoded as (010)
+3. task 3: Turn-taking (2)        --> encoded as (001)
 
 
 
