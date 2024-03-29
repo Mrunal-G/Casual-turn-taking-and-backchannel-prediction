@@ -81,12 +81,30 @@ HuggingFace Redpajama based chat and instruct models (3B & 7B variations):
 - https://huggingface.co/togethercomputer/RedPajama-INCITE-Instruct-3B-v1
 - https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Chat
 - https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Instruct
+
+  <! -- Would need to try different models for chat/instruction-tuning may be using trl.
+  https://medium.com/@vi.ai_/fine-tuning-llama-v2-7b-on-google-colab-unleashing-the-full-potential-of-language-modeling-9b9f05c3be35 -->
   
 # Late Fusion 
 A late fusion mechanism is used where the final embeddings emitted from the AM and LLM are concatenated and fed into a single linear classification layer with dimension 3 for prediction. 
 P(Y |XA, XL)
 
 [This description looks like the late fusion recipe usually used where both the probabilites of the classification results from 2 tasks are fused together]
+
+The authors have described 2 late fusion options:
+1.  In `Option 1 (Opt1)` both AM and LLM are loaded
+from the pretrained library [31] without fine-tuning.
+Then, both the fusion layer and the LLM base model undergo domain adaptation
+and downstream task training.
+
+2. In `Option 2 (Opt2)`, aside from loading the pretrained AM as in Opt1, the LLM is loaded after standalone fine-tuning as described in Section 2.2.
+   Then the LLM branch is also frozen and only the fusion layer is trained.
+
+**The key difference between Opt1 and Opt2 is whether LLM has been fine-tuned
+for the downstream task and frozen**
+Meaning in opt1 hubert is not finetuned. In opt2, hubert is fine-tuned for classification. I am going to start with option 2 here. 
+
+Opt1 not as much clearly described how ASR hubert model is used without standlone fine-tuning.
 
 
 
