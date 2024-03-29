@@ -33,15 +33,7 @@ More on tags:
 
  <!-- Tensorflow: Dataset: https://www.tensorflow.org/datasets/community_catalog/huggingface/swda --> 
 
-  ===
-## RedPajama
-- HuggingFace Dataset: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-V2?row=0
-HuggingFace Redpajama based chat and instruct models (3B & 7B variations):
-- https://huggingface.co/togethercomputer/RedPajama-INCITE-Chat-3B-v1
-- https://huggingface.co/togethercomputer/RedPajama-INCITE-Instruct-3B-v1
-- https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Chat
-- https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Instruct
-  
+
   
 # Tasks described in research paper:
 1. extendingthe turn-taking model to include backchanneling,
@@ -58,10 +50,45 @@ HuggingFace Redpajama based chat and instruct models (3B & 7B variations):
 
 During training, each sample will be
 augmented three times, with the following respective instructions:
-1) Inst 0: “Identify if the current speaker will continue to speak at
+1. Inst 0: “Identify if the current speaker will continue to speak at
 the end of the sentence.”;
 
-3) Inst 1: “Identify if another speaker will
+2. Inst 1: “Identify if another speaker will
 backchannel at the end of the sentence.”;
 
-5) Inst 2: “Identify if another speaker will take the turn at the end of the sentence.”
+3. Inst 2: “Identify if another speaker will take the turn at the end of the sentence.”
+
+# HuBERT: Accoustic classification
+The audio files are used for audio classification task with 3 categories with HuBERT. (The recipe described in the given Amazon research paper is same as done before for my thesis research). They manipulated the HuBERT  architecture for classification by average pooling and using a linear classifier maps the projection to three classes. 
+However, I need to get access to the audio files of the dataset and look at the format of the files as the speech data in swithboard is segmented in utterance units. 
+
+# LLM-fine-tuning
+LLM funetuning using GPT/ Redpajama models on huggingface used to encode the text of the (partial) utterances.
+Then, the embedding is fed into a linear layer of dimension 3
+for classification. 
+Note: Depending on the base LLM being used, different fine-tuning strategies are applied
+
+The given research paper shows more potential with redpajama. (They haven't specified which variation of redpajama model is used)
+
+  ===
+  
+  `RedPajama`:
+  
+- HuggingFace Dataset: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-V2?row=0
+  
+HuggingFace Redpajama based chat and instruct models (3B & 7B variations):
+- https://huggingface.co/togethercomputer/RedPajama-INCITE-Chat-3B-v1
+- https://huggingface.co/togethercomputer/RedPajama-INCITE-Instruct-3B-v1
+- https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Chat
+- https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Instruct
+  
+# Late Fusion 
+A late fusion mechanism is used where the final embeddings emitted from the AM and LLM are concatenated and fed into a single linear classification layer with dimension 3 for prediction. 
+P(Y |XA, XL)
+
+[This description looks like the late fusion recipe usually used where both the probabilites of the classification results from 2 tasks are fused together]
+
+
+
+
+
