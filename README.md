@@ -108,7 +108,7 @@ of “Backchannel” and “Turn-taking” samples.  **Ensure Same average numbe
 1. AUC - Area Under Curve
 2. Balance Accuracy- bAcc (used in TurnGPT)
 3. ROC - An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds. This curve plots two parameters: True Positive Rate. False Positive Rate.
-4. EER - Equal Error Rate
+4. EER - Equal Error Rate (EER is the point at which the false acceptance rate (FAR) and false rejection rate (FRR) are equal. In other words, it is the threshold at which the system is equally likely to wrongly accept a non-matching individual as it is to wrongly reject a matching individual.)
 
 During evaluation, all samples
 are used without downsampling, i.e., samples of each class in the
