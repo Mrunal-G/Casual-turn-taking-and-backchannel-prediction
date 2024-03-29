@@ -119,10 +119,10 @@ The audio files are used for audio classification task with 3 categories with Hu
 However, I need to get access to the audio files of the dataset and look at the format of the files as the speech data in swithboard is segmented in utterance units. 
 
 # LLM-fine-tuning
-LLM funetuning using GPT/ Redpajama models on huggingface used to encode the text of the (partial) utterances.
+LLM finetuning using GPT/ Redpajama models on huggingface used to encode the text of the (partial) utterances.
 Then, the embedding is fed into a linear layer of dimension 3
 for classification. 
-Note: Depending on the base LLM being used, different fine-tuning strategies are applied
+**Note: Depending on the base LLM being used, different fine-tuning strategies are applied**
 
 The given research paper shows more potential with redpajama. 
 - The authors used GPT2 (124M parameters) [26] and RedPajama (3B parameters) 
@@ -150,7 +150,7 @@ P(Y |XA, XL)
 
 
 
-[This description looks like the late fusion recipe usually used where both the probabilites of the classification results from 2 tasks are fused together]
+This description is **not** the late fusion recipe where both the probabilites of the classification results from 2 tasks are fused together.
 
 The authors have described 2 late fusion options:
 1.  In `Option 1 (Opt1)` both AM and LLM are loaded
@@ -165,6 +165,8 @@ and downstream task training.
 **The key difference between Opt1 and Opt2 is whether LLM has been fine-tuned
 for the downstream task and frozen**
 Meaning in opt1 hubert is not finetuned. In opt2, hubert is fine-tuned for classification. I am going to start with option 2 here. Standlone finetuning would most probably give better results than just loading pretrained model.  
+
+Observed relative improvements of 2.02%, 1.5% and 2.16% on average AUC for RedPajama, RedPajama + HuBERT Opt1 and Opt2, respectively.
 
 However, they mentioned RedPajama + HuBERT + Opt1  gave best result (without the dialogue history).
 
