@@ -46,17 +46,7 @@ More on tags:
 3. ROC - An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds. This curve plots two parameters: True Positive Rate. False Positive Rate.
 4. EER - Equal Error Rate
 
-# Instruction-tuning 
 
-During training, each sample will be
-augmented three times, with the following respective instructions:
-1. Inst 0: “Identify if the current speaker will continue to speak at
-the end of the sentence.”;
-
-2. Inst 1: “Identify if another speaker will
-backchannel at the end of the sentence.”;
-
-3. Inst 2: “Identify if another speaker will take the turn at the end of the sentence.”
 
 # HuBERT: Accoustic classification
 The audio files are used for audio classification task with 3 categories with HuBERT. (The recipe described in the given Amazon research paper is same as done before for my thesis research). They manipulated the HuBERT  architecture for classification by average pooling and using a linear classifier maps the projection to three classes. 
@@ -111,6 +101,18 @@ separate binary classification task. This will later allows us to evaluate perfo
 1. task 1: Continuing Speech (0)  --> encoded as (100)
 2. task 2: Backchannel (1)        --> encoded as (010)
 3. task 3: Turn-taking (2)        --> encoded as (001)
+
+   ### Instruction-tuning 
+
+During training, each sample will be
+augmented three times, with the following respective instructions:
+1. Inst 0: “Identify if the current speaker will continue to speak at
+the end of the sentence.”;
+
+2. Inst 1: “Identify if another speaker will
+backchannel at the end of the sentence.”;
+
+3. Inst 2: “Identify if another speaker will take the turn at the end of the sentence.”
 
 
 
