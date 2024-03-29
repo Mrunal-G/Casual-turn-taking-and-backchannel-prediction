@@ -1,6 +1,6 @@
 # Speech_Conversation_fusion_LLM
 
-- Amazon Alex AI research paper: https://www.amazon.science/publications/turn-taking-and-backchannel-prediction-with-acoustic-and-large-language-model-fusion (code not provided)
+- Amazon Alex AI research paper: https://www.amazon.science/publications/turn-taking-and-backchannel-prediction-with-acoustic-and-large-language-model-fusion (link to github not provided)
 
 1. https://arxiv.org/html/2401.14717v1
 2. https://vapi.ai/
