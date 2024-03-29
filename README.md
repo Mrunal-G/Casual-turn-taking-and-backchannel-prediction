@@ -102,9 +102,8 @@ and downstream task training.
 
 **The key difference between Opt1 and Opt2 is whether LLM has been fine-tuned
 for the downstream task and frozen**
-Meaning in opt1 hubert is not finetuned. In opt2, hubert is fine-tuned for classification. I am going to start with option 2 here. 
+Meaning in opt1 hubert is not finetuned. In opt2, hubert is fine-tuned for classification. I am going to start with option 2 here. Standlone finetuning would most probably give better results than just loading pretrained model.  
 
-Opt1 not as much clearly described how ASR hubert model is used without standlone fine-tuning.
 
 
 
