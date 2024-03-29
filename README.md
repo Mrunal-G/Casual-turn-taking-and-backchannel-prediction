@@ -51,7 +51,7 @@ swb_punctuations = ["{", "}", "[", "]-", "]", "((", "))", "(", ")"]
 2. use of LLMs with acoustic fusion for these tasks, (hubert use)
 3. exploration of LLMs for instruction-tuning rather than simple token encoding and prediction (textual LLMs for intruction-tuning instead of classification fine-tuning)
 
-## Data preprocessing:
+## Data preprocessing for textual LLM based on TurnGPT:
 
 22nd reference is research paper on `TurnGPT`.
 
