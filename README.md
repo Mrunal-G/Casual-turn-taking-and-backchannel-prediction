@@ -122,6 +122,21 @@ backchannel at the end of the sentence.”;
 
 3. Inst 2: “Identify if another speaker will take the turn at the end of the sentence.”
 
+**Note**: All the above steps did not consider `dialogue history` in instruction tuning.
+
+# Dialog History
+
+Additional steps to consider dialog history are given:
+
+two sentences preceding the target partial utterance, with speaker
+changes marked, are appended to the task-specific instruction, using
+the following format: 
+Identify (instruction text): (history with
+speaker token). (target sample with speaker token).
+
+(This step needs further investigation). This step is using other information present in the switchboard dataset.
+
+
 
 
 
