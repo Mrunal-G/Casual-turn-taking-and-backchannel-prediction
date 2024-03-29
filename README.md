@@ -58,7 +58,7 @@ swb_punctuations = ["{", "}", "[", "]-", "]", "((", "))", "(", ")"]
 
 
 # HuBERT: Accoustic classification
-The audio files are used for audio classification task with 3 categories with HuBERT. (The recipe described in the given Amazon research paper is same as done before for my thesis research). They manipulated the HuBERT  architecture for classification by average pooling and using a linear classifier maps the projection to three classes. 
+The audio files are used for audio classification task with 3 categories with HuBERT. (The recipe described in the given Amazon research paper is same as done before for my thesis research). They manipulated the HuBERT  architecture for classification by average pooling and using a linear classifier to map the projection to three classes. 
 However, I need to get access to the audio files of the dataset and look at the format of the files as the speech data in swithboard is segmented in utterance units. 
 
 # LLM-fine-tuning
