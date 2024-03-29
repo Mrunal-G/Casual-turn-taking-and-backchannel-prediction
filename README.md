@@ -78,15 +78,20 @@ the utterance.
 
 The data is split by session with train:validation:test => ratio of 2000:300:138
 
+Note: During training, since “Continuing Speech” is by far the majority class. So a downsampling procedure is applied to samples of that “Continuing Speech” class, such that that the label frequency equals the average number
+of “Backchannel” and “Turn-taking” samples.  **Ensure Same average number of samples for each of the 3 categories by downsampling**.
+
 
 
 ## Evaluation Metrics
 1. AUC - Area Under Curve
-2. Balance Accuracy- bAcc
+2. Balance Accuracy- bAcc (used in TurnGPT)
 3. ROC - An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds. This curve plots two parameters: True Positive Rate. False Positive Rate.
 4. EER - Equal Error Rate
 
-
+During evaluation, all samples
+are used without downsampling, i.e., samples of each class in the
+test session will be decoded regardless of the class imbalance.
 
 # HuBERT fine-tuning for Accoustic classification
 The audio files are used for audio classification task with 3 categories with HuBERT. (The recipe described in the given Amazon research paper was done before for my thesis research). They manipulated the HuBERT  architecture for classification by average pooling and using a linear classifier to map the projection to three classes. 
