@@ -121,7 +121,7 @@ During evaluation, all samples
 are used without downsampling, i.e., samples of each class in the
 test session will be decoded regardless of the class imbalance.
 
-Note: I can also use F1-score and Accuracy for the task.
+Note: I can also use F1-score and Accuracy for the task (based on other research papers).
 
 # HuBERT fine-tuning for Accoustic classification
 The audio files are used for audio classification task with 3 categories with HuBERT. (The recipe described in the given Amazon research paper was done before for my thesis research). They manipulated the HuBERT  architecture for classification by average pooling and using a linear classifier to map the projection to three classes. 
