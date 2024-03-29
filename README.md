@@ -5,6 +5,10 @@ So first I start with all the necessary steps as mentioned in 2.2 with HuBERT fo
 Next I investigate the textual LLM data preprocessing. With textual LLM I have option for traditional fine-tuning or instruction-tuning. Here I will explore instruction-tuning since it gave better results in the research paper.
 They got better results with redpajama 3B parameter model - it was larger model. So, I can also try the 7B variation of redpajama LLM.
 
+Late fusion = Concatenate embeddings emitted from HuBERT classification and Language model classification and feed into a a single linear
+classification layer with dimension 3 for prediction. 
+
+=== 
 the authors mentioned that when looking at each class individually, both
 “Turn-taking” and “Continuing Speech” classes are predicted better with dialog history information, while the “Backchannel” class sees a
 slight degradation. This could be because backchanneling is largely
@@ -142,6 +146,8 @@ HuggingFace Redpajama based chat and instruct models (3B & 7B variations):
 # Late Fusion 
 A late fusion mechanism is used where the final embeddings emitted from the AM and LLM are concatenated and fed into a single linear classification layer with dimension 3 for prediction. 
 P(Y |XA, XL)
+
+
 
 [This description looks like the late fusion recipe usually used where both the probabilites of the classification results from 2 tasks are fused together]
 
