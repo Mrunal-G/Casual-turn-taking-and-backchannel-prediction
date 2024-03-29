@@ -160,6 +160,13 @@ However, the authors mentioned in results section that the difference between Op
 
 So, it could also mean that the language models heavily influence the overall predictions results.
 
+===
+
+Focused two-class (excluding backchannel like in TurnGPT paper) evaluation, the amazon research paper
+obtain an improved bAcc of 0.8578 for the RedPajama + HuBERT +
+Opt1 fusion model, confirming the benefit of complementing lexical
+with acoustic information.
+
 # Multi-task instruction fine-tuning
 Rather than setting up a three-way classification, each class is handled as a
 separate binary classification task. This will later allows us to evaluate performance as three separate detection tasks.
