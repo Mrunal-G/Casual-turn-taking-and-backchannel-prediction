@@ -1,6 +1,6 @@
 # Casual turn-taking and backchannel prediction
 
-Essentially, I can solve this research problem by using single modality either audio using only HuBERT model or using only textual LLM like GPT or redpajama. 
+Essentially, I can solve this research problem by using single modality - either audio by using only HuBERT model or using textual language model like GPT or redpajama. 
 So first I start with all the necessary steps as mentioned in 2.2 with HuBERT for classification. It is more straightforward. 
 Next I investigate the textual LLM data preprocessing. With textual LLM I have option for traditional fine-tuning or instruction-tuning. Here I will explore instruction-tuning since it gave better results in the research paper.
 They got better results with redpajama 3B parameter model - it was larger model. So, I can also try the 7B variation of redpajama LLM.
