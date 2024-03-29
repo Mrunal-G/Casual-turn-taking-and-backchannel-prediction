@@ -47,9 +47,9 @@ swb_punctuations = ["{", "}", "[", "]-", "]", "((", "))", "(", ")"]
 
   
 # Tasks described in research paper:
-1. extendingthe turn-taking model to include backchanneling,
-2. use of LLMs with acoustic fusion for these tasks, and
-3. exploration of LLMs for instruction-tuning rather than simple token encoding and prediction
+1. extending the turn-taking model to include backchanneling, (TurnGPT does not include backchanneling only turn-taking prediciton)
+2. use of LLMs with acoustic fusion for these tasks, (hubert use)
+3. exploration of LLMs for instruction-tuning rather than simple token encoding and prediction (textual LLMs for intruction-tuning instead of classification fine-tuning)
 
 ## Data preprocessing:
 
