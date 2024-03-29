@@ -147,9 +147,15 @@ and downstream task training.
 2. In `Option 2 (Opt2)`, aside from loading the pretrained AM as in Opt1, the LLM is loaded after standalone fine-tuning as described in Section 2.2.
    Then the LLM branch is also frozen and only the fusion layer is trained.
 
+
 **The key difference between Opt1 and Opt2 is whether LLM has been fine-tuned
 for the downstream task and frozen**
 Meaning in opt1 hubert is not finetuned. In opt2, hubert is fine-tuned for classification. I am going to start with option 2 here. Standlone finetuning would most probably give better results than just loading pretrained model.  
+
+However, they mentioned RedPajama + HuBERT + Opt1  gave best result.
+
+Opt1 not clearly explained how they are using HuBERT and Language pretrained models loaded from the huggingface library without fine-tuning and adopting them for Casual turn-taking and backchannel prediction downstream task.
+
 
 # Multi-task instruction fine-tuning
 Rather than setting up a three-way classification, each class is handled as a
