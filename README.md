@@ -103,7 +103,8 @@ Then, the embedding is fed into a linear layer of dimension 3
 for classification. 
 Note: Depending on the base LLM being used, different fine-tuning strategies are applied
 
-The given research paper shows more potential with redpajama. (They haven't specified which variation of redpajama model is used)
+The given research paper shows more potential with redpajama. 
+- The authors used GPT2 (124M parameters) [26] and RedPajama (3B parameters) 
 
   ===
   
