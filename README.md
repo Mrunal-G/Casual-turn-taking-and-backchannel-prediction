@@ -71,6 +71,13 @@ the other speaker where backchanneling occurs as “Backchannel”.
 If a word is marked by none of these two labels, the default label of
 “Continuing Speech“ is assigned.
 
+## Output of Data preprocessing
+
+After this preparation, each sample is a (partial) utterance (audio, text, or both) spoken by a single speaker, with the class label given by the last word’s label within
+the utterance. 
+
+The data is split by session with train:validation:test => ratio of 2000:300:138
+
 
 
 ## Evaluation Metrics
