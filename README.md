@@ -10,10 +10,10 @@ classification layer with dimension 3 for prediction.  (need further investigati
 
 === 
 
-The authors mentioned that when looking at each class individually, both
+The authors mentioned that "when looking at each class individually, both
 “Turn-taking” and “Continuing Speech” classes are predicted better with dialog history information, while the “Backchannel” class sees a
 slight degradation. This could be because backchanneling is largely
-a locally-cued behavior and affected little by long-term context.
+a locally-cued behavior and affected little by long-term context."
 
 So, if I am to focuss on Backchannel prediction task, I would mostly leave out the dialog history preprocessing.
 
