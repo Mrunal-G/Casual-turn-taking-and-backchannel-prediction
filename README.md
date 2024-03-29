@@ -82,8 +82,8 @@ HuggingFace Redpajama based chat and instruct models (3B & 7B variations):
 - https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Chat
 - https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Instruct
 
-  <! -- Would need to try different models for chat/instruction-tuning may be using trl.
-  https://medium.com/@vi.ai_/fine-tuning-llama-v2-7b-on-google-colab-unleashing-the-full-potential-of-language-modeling-9b9f05c3be35 -->
+  Would need to try different models for chat/instruction-tuning may be using trl.
+<!-- https://medium.com/@vi.ai_/fine-tuning-llama-v2-7b-on-google-colab-unleashing-the-full-potential-of-language-modeling-9b9f05c3be35 -->
   
 # Late Fusion 
 A late fusion mechanism is used where the final embeddings emitted from the AM and LLM are concatenated and fed into a single linear classification layer with dimension 3 for prediction. 
