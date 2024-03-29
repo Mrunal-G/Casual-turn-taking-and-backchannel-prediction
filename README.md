@@ -102,6 +102,13 @@ separate binary classification task. This will later allows us to evaluate perfo
 2. task 2: Backchannel (1)        --> encoded as (010)
 3. task 3: Turn-taking (2)        --> encoded as (001)
 
+- For each generated sample, if the prepended instruction corresponds to the ground-truth label, i.e. {inst0, sample0}, {inst1, sample1} and {inst2, sample2}, then the corresponding binary label will
+be assigned as 1, otherwise 0.
+- Each classifier is only in charge of one
+corresponding instruction and updates only its parameters, without
+being affected by samples augmented by the other two instructions.
+
+
    ### Instruction-tuning 
 
 During training, each sample will be
