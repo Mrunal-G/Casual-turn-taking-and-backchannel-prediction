@@ -156,6 +156,9 @@ However, they mentioned RedPajama + HuBERT + Opt1  gave best result.
 
 Opt1 not clearly explained how they are using HuBERT and Language pretrained models loaded from the huggingface library without fine-tuning and adopting them for Casual turn-taking and backchannel prediction downstream task.
 
+However, the authors mentioned in results section that the difference between Opt1 and Opt2 does not share the same pattern for GPT2 and RedPajama. RedPajama works better with Opt1. 
+
+So, it could also mean that the language models heavily influence the overall predictions results.
 
 # Multi-task instruction fine-tuning
 Rather than setting up a three-way classification, each class is handled as a
