@@ -120,6 +120,8 @@ HuggingFace Redpajama based chat and instruct models (3B & 7B variations):
 
 <!-- Would need to try different models for chat/instruction-tuning may be using trl.
  https://medium.com/@vi.ai_/fine-tuning-llama-v2-7b-on-google-colab-unleashing-the-full-potential-of-language-modeling-9b9f05c3be35 -->
+
+ All models are trained with learning rate 5 × 10−5 , number of epochs 5, and batch size 4.
   
 # Late Fusion 
 A late fusion mechanism is used where the final embeddings emitted from the AM and LLM are concatenated and fed into a single linear classification layer with dimension 3 for prediction. 
