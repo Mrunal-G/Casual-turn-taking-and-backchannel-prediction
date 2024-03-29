@@ -43,7 +43,10 @@ HuggingFace Redpajama based chat and instruct models (3B & 7B variations):
 - https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Instruct
   
   
-
+# Tasks described in research paper:
+1. extendingthe turn-taking model to include backchanneling,
+2. use of LLMs with acoustic fusion for these tasks, and
+3. exploration of LLMs for instruction-tuning rather than simple token encoding and prediction
 
 ## Evaluation Metrics
 1. AUC - Area Under Curve
