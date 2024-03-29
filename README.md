@@ -5,6 +5,13 @@ So first I start with all the necessary steps as mentioned in 2.2 with HuBERT fo
 Next I investigate the textual LLM data preprocessing. With textual LLM I have option for traditional fine-tuning or instruction-tuning. Here I will explore instruction-tuning since it gave better results in the research paper.
 They got better results with redpajama 3B parameter model - it was larger model. So, I can also try the 7B variation of redpajama LLM.
 
+the authors mentioned that when looking at each class individually, both
+“Turn-taking” and “Continuing Speech” classes are predicted better with dialog history information, while the “Backchannel” class sees a
+slight degradation. This could be because backchanneling is largely
+a locally-cued behavior and affected little by long-term context.
+
+So, if I am to focuss on Backchannel prediction task, I would mostly leave out the dialog history preprocessing.
+
 Note: with Single modality, language models yield much better performances than acoustic models (From the research paper).
 
 # Speech_Conversation_fusion_LLM
@@ -152,7 +159,7 @@ and downstream task training.
 for the downstream task and frozen**
 Meaning in opt1 hubert is not finetuned. In opt2, hubert is fine-tuned for classification. I am going to start with option 2 here. Standlone finetuning would most probably give better results than just loading pretrained model.  
 
-However, they mentioned RedPajama + HuBERT + Opt1  gave best result.
+However, they mentioned RedPajama + HuBERT + Opt1  gave best result (without the dialogue history).
 
 Opt1 not clearly explained how they are using HuBERT and Language pretrained models loaded from the huggingface library without fine-tuning and adopting them for Casual turn-taking and backchannel prediction downstream task.
 
@@ -198,6 +205,15 @@ backchannel at the end of the sentence.”;
 **Note**: All the above steps did not consider `dialogue history` in instruction tuning.
 
 # Dialog History
+
+RedPajama + HuBERT + Opt1  gave best result (without the dialogue history).
+
+the authors mentioned that when looking at each class individually, both
+“Turn-taking” and “Continuing Speech” classes are predicted better with dialog history information, while the “Backchannel” class sees a
+slight degradation. This could be because backchanneling is largely
+a locally-cued behavior and affected little by long-term context.
+
+===
 
 Additional steps to consider dialog history are given:
 
