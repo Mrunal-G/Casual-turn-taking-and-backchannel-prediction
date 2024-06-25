@@ -28,9 +28,13 @@ Note: with Single modality, language models yield much better performances than 
 # Speech_Conversation_fusion_LLM
 
 
-1. https://arxiv.org/html/2401.14717v1
+-  https://arxiv.org/html/2401.14717v1
+
+ <!-- 
 2. https://vapi.ai/
 3. https://dashboard.vapi.ai/
+
+-->
 
 - Amazon Alex AI research paper: https://www.amazon.science/publications/turn-taking-and-backchannel-prediction-with-acoustic-and-large-language-model-fusion (link to github not provided)
   
